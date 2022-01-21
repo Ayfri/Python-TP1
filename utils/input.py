@@ -3,7 +3,7 @@ import sys
 
 from typing import Callable
 
-def intInput(min_nbr: int = -sys.maxsize, max_nbr: Callable[[int], int] | None = lambda i: sys.maxsize, text = "Rentrez un nombre :") -> int:
+def int_input(min_nbr: int = -sys.maxsize, max_nbr: Callable[[int], int] | None = lambda i: sys.maxsize, text = "Rentrez un nombre : ") -> int:
     """
     Permet de demander un nombre entier à l'utilisateur.
     :param min_nbr: Le nombre minimum à rentrer.
@@ -33,7 +33,7 @@ def intInput(min_nbr: int = -sys.maxsize, max_nbr: Callable[[int], int] | None =
 
     return result
 
-def charInput() -> chr:
+def char_input() -> chr:
     """
     Permet de demander un caractère à l'utilisateur.
     :return: Le caractère saisi par l'utilisateur.

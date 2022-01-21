@@ -1,6 +1,6 @@
 import math
 
-from utils.input import intInput
+from utils.input import int_input
 
 def ex6() -> None:
 	"""
@@ -8,7 +8,7 @@ def ex6() -> None:
 	:return: None
 	:rtype: None
 	"""
-	number: int = intInput(1)
+	number: int = int_input(1)
 	print(f"""
 Nombre originel : {number}
 Logarithme népérien log(n) : {math.log(number)}

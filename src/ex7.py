@@ -6,10 +6,10 @@ def ex7() -> None:
 	:return: None
 	:rtype: None
 	"""
-	totalDebt = float_input("Saisissez le montant de votre dette : ")
-	totalYears = float_input("Saisissez le nombre d'années que vous avez dépensé pour payer votre dette : ")
-	annualRate = float_input("Saisissez le taux d'intérêt annuel : ")
-	monthRate = ((annualRate / 100) / 12)
-	monthTotal = (totalYears * 12)
-	monthlyPayment = totalDebt * monthRate * (((1 + monthRate) ** monthTotal) / ((1 + monthRate) ** monthTotal - 1))
-	print(f"Mensualités = {monthlyPayment:.2f}€")
+	total_debt: float = float_input("Saisissez le montant de votre dette : ")
+	total_years: float = float_input("Saisissez le nombre d'années que vous avez dépensé pour payer votre dette : ")
+	annual_rate: float = float_input("Saisissez le taux d'intérêt annuel : ")
+	month_rate: float = ((annual_rate / 100) / 12)
+	month_total: float = (total_years * 12)
+	monthly_payment: float = total_debt * month_rate * (((1 + month_rate) ** month_total) / ((1 + month_rate) ** month_total - 1))
+	print(f"Mensualités = {monthly_payment:.2f}€")

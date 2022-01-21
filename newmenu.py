@@ -1,7 +1,7 @@
 from typing import Callable
 from utils.prints import Color, print_line
 
-exercices: list[str] = [
+exercises: list[str] = [
 	'Types prédéfinis',
 	'Calcul d’une surface',
 	'Somme',
@@ -11,7 +11,7 @@ exercices: list[str] = [
 	'Calcul de crédit'
 ]
 
-def openExercice(number: int) -> None:
+def open_exercice(number: int) -> None:
 	"""
 	Ouvre un exercice en fonction de son numéro.
 	:param number: Le numéro de l'exercice à ouvrir.
@@ -20,22 +20,19 @@ def openExercice(number: int) -> None:
 	:rtype: None
 	"""
 	module: object = __import__(f"src.ex{number}")
-	subModule: object = getattr(module, f"ex{number}")
-	function: Callable = getattr(subModule, f"tp{number}")
+	sub_module: object = getattr(module, f"ex{number}")
+	function: Callable = getattr(sub_module, f"ex{number}")
 	function()
 
-def terminalMenu() -> None:
+def terminal_menu() -> None:
 	"""
 	Affiche le menu principal du terminal.
 	:return: None
 	:rtype: None
 	"""
-	list = '\n'.join(f"Exercice {i} : {exercices[i - 1]}" for i in range(1, 8))
+	list = '\n'.join(f"Exercice {i} : {exercises[i - 1]}" for i in range(1, 8))
 	print_line("Menu")
-	print(f"""{list}
-	
-STOP pour arrêter.
-""")
+	print(f"{list}\n\nSTOP pour arrêter.")
 
 def main() -> None:
 	"""
@@ -46,7 +43,7 @@ def main() -> None:
 	"""
 	print(f"{Color.RED}Bienvenue dans le menu du TP 1")
 	while True:
-		terminalMenu()
+		terminal_menu()
 		input1: str = input("Veuillez choisir un exercice à réaliser : ")
 		if input1.lower() == "stop":
 			print("Au revoir :)")
@@ -54,7 +51,7 @@ def main() -> None:
 		elif input1.isdigit() and int(input1) in range(1, 7):
 			print(f"Lancement de l'exercice n°{input1}")
 			print_line(f"Exercice n°{input1}")
-			openExercice(int(input1))
+			open_exercice(int(input1))
 			print("Tapez ENTRER pour revenir dans le menu.")
 			input()
 		else:

@@ -1,7 +1,6 @@
 import math
-import sys
 
-from utils.input import intInput
+from utils.input import int_input
 
 def ex4() -> None:
 	"""
@@ -9,10 +8,10 @@ def ex4() -> None:
 	:return: None
 	:rtype: None
 	"""
-	number: int = intInput(min_nbr = 1, max_nbr = math.factorial)
-	bigResult: int = math.factorial(number)
-	additionString: str = ' '.join([f'{i} ×' for i in range(1, number)]) + ' ' + str(number)
+	number: int = int_input(min_nbr = 1, max_nbr = math.factorial)
+	big_result: int = math.factorial(number)
+	addition_string: str = ' '.join([f'{i} ×' for i in range(1, number)]) + ' ' + str(number)
 	print(f"""
 	La factorielle de {number}, notée 8!, et vaut :
-	{additionString} = {bigResult}
-	{bigResult} = {additionString}""")
+	{addition_string} = {big_result}
+	{big_result} = {addition_string}""")

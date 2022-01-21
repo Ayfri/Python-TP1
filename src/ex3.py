@@ -1,6 +1,4 @@
-import sys
-
-from utils.input import intInput
+from utils.input import int_input
 
 def ex3() -> None:
     """
@@ -8,10 +6,10 @@ def ex3() -> None:
     :return: None
     :rtype: None
     """
-    number: int = intInput(1, lambda i: (i * (i + 1)) / 2)
-    bigResult: int = int((number * (number + 1)) / 2)
-    additionString: str = ' '.join([f'{i} +' for i in range(1, number)]) + ' ' + str(number)
+    number: int = int_input(1, lambda i: (i * (i + 1)) / 2)
+    big_result: int = int((number * (number + 1)) / 2)
+    addition_string: str = ' '.join([f'{i} +' for i in range(1, number)]) + ' ' + str(number)
     print(f"""
-    La somme du nombre {number} et des inférieurs jusqu'à 1 est {bigResult}
-    {additionString} = {bigResult}
-    {bigResult} = {additionString}""")
+    La somme du nombre {number} et des inférieurs jusqu'à 1 est {big_result}
+    {addition_string} = {big_result}
+    {big_result} = {addition_string}""")
