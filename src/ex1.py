@@ -14,3 +14,6 @@ def ex1() -> None:
 	number: int = int_input(1, lambda i: sys.maxunicode)
 	print(f"""{Color.PURPLE}Vous avez entré : {char} et {str(number)}
 L'index du caractère est {ord(char)} et le nombre en tant que caractère est {chr(number)}{Color.END}""")
+
+if __name__ == '__main__':
+	ex1()

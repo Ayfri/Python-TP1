@@ -12,3 +12,6 @@ def ex5() -> None:
 	table: str = '\n'.join([f'- {number} x {i} = {number * i}' for i in range(1, 11)])
 	print(f"""{Color.PURPLE}Table de {number} :
 {table}{Color.END}""")
+
+if __name__ == '__main__':
+	ex5()

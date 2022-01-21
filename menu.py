@@ -5,8 +5,7 @@ from utils.prints import Color, print_line
 exercises: dict[str, str] = {
 	'Types prédéfinis': """
 • Écrire un script permettant de rentrer 1 caractères et un entier.
-• Afficher la variables sous forme d'entiers et de caractères
-""",
+• Afficher la variables sous forme d'entiers et de caractères.""",
 	'Calcul d’une surface': """Écrire un programme qui calcule la surface d’un trapèze.""",
 	'Somme': """Écrire un algorithme qui demande un nombre de départ, et qui calcule la somme des entiers jusqu’à ce nombre.""",
 	'Factorielle': """Écrire un algorithme qui demande un nombre de départ, et qui calcule sa factorielle.""",
@@ -70,7 +69,7 @@ def main() -> None:
 				input()
 			else:
 				print(f"{Color.YELLOW}Veuillez entrer un nombre entre 1 et 7.{Color.END}")
-		except Exception:
+		except:
 			print(f"{Color.CYAN}Au revoir :){Color.END}")
 			exit(1)
 

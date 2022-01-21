@@ -13,5 +13,9 @@ def ex7() -> None:
 	annual_rate: float = float_input("Saisissez le taux d'intérêt annuel : ")
 	month_rate: float = ((annual_rate / 100) / 12)
 	month_total: float = (total_years * 12)
-	monthly_payment: float = total_debt * month_rate * (((1 + month_rate) ** month_total) / ((1 + month_rate) ** month_total - 1))
+	monthly_payment: float = total_debt * month_rate * (
+				((1 + month_rate) ** month_total) / ((1 + month_rate) ** month_total - 1))
 	print(f"{Color.PURPLE}Mensualités = {monthly_payment:.2f}€{Color.END}")
+
+if __name__ == "__main__":
+	ex7()

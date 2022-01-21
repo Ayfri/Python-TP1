@@ -16,3 +16,6 @@ def ex4() -> None:
 	print(f"""{Color.PURPLE}La factorielle de {number}, notée 8!, et vaut :
 {addition_string} = {big_result}
 {big_result} = {addition_string}{Color.END}""")
+
+if __name__ == '__main__':
+	ex4()

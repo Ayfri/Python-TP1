@@ -116,3 +116,6 @@ def ex2() -> None:
 	worker1.start()
 	worker2.start()
 	queue.join()
+
+if __name__ == "__main__":
+	ex2()

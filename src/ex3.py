@@ -14,3 +14,6 @@ def ex3() -> None:
 	print(f"""{Color.PURPLE}La somme du nombre {number} et des inférieurs jusqu'à 1 est {big_result}
 	{addition_string} = {big_result}
 	{big_result} = {addition_string}{Color.END}""")
+
+if __name__ == '__main__':
+	ex3()

@@ -15,3 +15,6 @@ def ex6() -> None:
 Logarithme népérien log(n) : {math.log(number)}
 Sinus sin(n) : {math.sin(number)}
 Cosinus cos(n) : {math.cos(number)}{Color.END}""")
+
+if __name__ == "__main__":
+	ex6()
