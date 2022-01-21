@@ -1,8 +1,10 @@
 from utils.input import float_input
+from utils.prints import Color
 
 def ex7() -> None:
 	"""
 	Exercice 7: Calculer le taux de crédit mensuel d'un prêt sur plusieurs années avec un taux d'intérêts fixes.
+
 	:return: None
 	:rtype: None
 	"""
@@ -12,4 +14,4 @@ def ex7() -> None:
 	month_rate: float = ((annual_rate / 100) / 12)
 	month_total: float = (total_years * 12)
 	monthly_payment: float = total_debt * month_rate * (((1 + month_rate) ** month_total) / ((1 + month_rate) ** month_total - 1))
-	print(f"Mensualités = {monthly_payment:.2f}€")
+	print(f"{Color.PURPLE}Mensualités = {monthly_payment:.2f}€{Color.END}")

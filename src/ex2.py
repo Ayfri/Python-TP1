@@ -6,10 +6,12 @@ from tkinter import Canvas, Frame, Label, Tk
 from typing import Any, Tuple
 
 from utils.input import int_input
+from utils.prints import Color
 
 def make_window() -> None:
 	"""
 	Crée la fenêtre du graphique.
+
 	:return: None
 	:rtype: None
 	"""
@@ -56,6 +58,7 @@ class WindowWorker(Thread):
 	def run(self) -> None:
 		"""
 		Ouvre le graphique et attend les entrées de l'utilisateur.
+
 		:return: None
 		:rtype: None
 		"""
@@ -79,14 +82,15 @@ class TPWorker(Thread):
 	def run(self) -> None:
 		"""
 		Affiche la formule de calcul du trapèze ansi que le résultat.
+
 		:return: None
 		:rtype: None
 		"""
 		while True:
 			a, b, c = self.queue.get()
 			try:
-				print(f"""Surface du trapèze = (A + B) * C * 0.5
-La surface du trapèze est ({a} + {b}) * {c} * 0.5 = {int((a + b) * c * 0.5)}m""")
+				print(f"""{Color.PURPLE}Surface du trapèze = (A + B) * C * 0.5
+La surface du trapèze est ({a} + {b}) * {c} * 0.5 = {int((a + b) * c * 0.5)}m{Color.END}""")
 			finally:
 				self.queue.task_done()
 
@@ -94,6 +98,7 @@ def ex2() -> None:
 	"""
 	Exercice 2: Calcul de la surface d'un trapèze.
 	Bonus: Afficher la surface d'un trapèze dans une fenêtre graphique.
+
 	:return: None
 	:rtype: None
 	"""
