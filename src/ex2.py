@@ -3,7 +3,7 @@ import traceback
 from queue import Queue
 from threading import Thread
 from tkinter import Canvas, Frame, Label, Tk
-from typing import Any, Tuple
+from typing import Any
 
 from utils.input import int_input
 from utils.prints import Color
@@ -20,9 +20,9 @@ def make_window() -> None:
 	window.geometry("400x400")
 	window.resizable = False
 	frame: Frame = tk.Frame(window)
-	frame.pack(fill=tk.BOTH, expand=1)
+	frame.pack(fill = tk.BOTH, expand = 1)
 
-	canvas: Canvas = tk.Canvas(frame, width=400, height=400)
+	canvas: Canvas = tk.Canvas(frame, width = 400, height = 400)
 	canvas.create_line(50, 250, 350, 250)
 	canvas.create_line(100, 250, 100, 50)
 	canvas.create_line(300, 250, 300, 50)
@@ -30,20 +30,20 @@ def make_window() -> None:
 
 	canvas.create_line(50, 250, 100, 50)
 	canvas.create_line(350, 250, 300, 50)
-	canvas.pack(fill=tk.BOTH, expand=1)
+	canvas.pack(fill = tk.BOTH, expand = 1)
 	font: (str, int) = ("Helvetica", 12)
 
-	label: Label = tk.Label(frame, text="(A + B) * C * 0.5", font=font)
-	label.place(anchor="center", relx=0.5, rely=0.85)
+	label: Label = tk.Label(frame, text = "(A + B) * C * 0.5", font = font)
+	label.place(anchor = "center", relx = 0.5, rely = 0.85)
 
-	label_a: Label = tk.Label(frame, text="A", font=font)
-	label_a.place(anchor="center", relx=0.5, rely=0.7)
+	label_a: Label = tk.Label(frame, text = "A", font = font)
+	label_a.place(anchor = "center", relx = 0.5, rely = 0.7)
 
-	label_b: Label = tk.Label(frame, text="B", font=font)
-	label_b.place(anchor="center", relx=0.7, rely=0.35)
+	label_b: Label = tk.Label(frame, text = "B", font = font)
+	label_b.place(anchor = "center", relx = 0.7, rely = 0.35)
 
-	label_c: Label = tk.Label(frame, text="C", font=font)
-	label_c.place(anchor="center", relx=0.5, rely=0.07)
+	label_c: Label = tk.Label(frame, text = "C", font = font)
+	label_c.place(anchor = "center", relx = 0.5, rely = 0.07)
 
 	window.mainloop()
 
@@ -102,9 +102,9 @@ def ex2() -> None:
 	:return: None
 	:rtype: None
 	"""
-	first: int = int_input(text="Rentrez A (en mètres) : ")
-	second: int = int_input(text="Rentrez B (en mètres) : ")
-	third: int = int_input(text="Rentrez C (en mètres) : ")
+	first: int = int_input(text = "Rentrez A (en mètres) : ")
+	second: int = int_input(text = "Rentrez B (en mètres) : ")
+	third: int = int_input(text = "Rentrez C (en mètres) : ")
 
 	queue: Queue[Any] = Queue()
 	worker1: WindowWorker = WindowWorker(queue)

@@ -14,5 +14,5 @@ def ex4() -> None:
 	big_result: int = math.factorial(number)
 	addition_string: str = ' '.join([f'{i} ×' for i in range(1, number)]) + ' ' + str(number)
 	print(f"""{Color.PURPLE}La factorielle de {number}, notée 8!, et vaut :
-	{addition_string} = {big_result}
-	{big_result} = {addition_string}{Color.END}""")
+{addition_string} = {big_result}
+{big_result} = {addition_string}{Color.END}""")

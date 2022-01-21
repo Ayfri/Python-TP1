@@ -20,11 +20,10 @@ def print_line(text = '', length = 40, color: str | None = None) -> None:
 	print('-' * (length // 2) + text + '-' * (length // 2) + Color.END)
 
 class Color:
-	RED: str ='\033[91m'
-	GREEN: str ='\033[92m'
-	YELLOW: str ='\033[93m'
-	BLUE: str ='\033[94m'
-	PURPLE: str='\033[95m'
-	CYAN: str='\033[96m'
-	WHITE: str='\033[97m'
-	END: str='\033[0m'
+	RED: str = '\033[91m'
+	GREEN: str = '\033[92m'
+	YELLOW: str = '\033[93m'
+	BLUE: str = '\033[94m'
+	PURPLE: str = '\033[95m'
+	CYAN: str = '\033[96m'
+	END: str = '\033[0m'
